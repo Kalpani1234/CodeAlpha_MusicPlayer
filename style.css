@@ -7,7 +7,7 @@ body {
   }
   
   .player {
-    height: 95vh;
+    height: 87vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -17,7 +17,7 @@ body {
     border: 1px solid transparent;
     padding: 30px;
     border-radius: 20px;
-    background-color: #ddd;
+    background-color: rgba(238, 238, 238, 0.6);
     box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px,
       rgba(0, 0, 0, 0.22) 0 15px 12px;
   }
@@ -30,7 +30,7 @@ body {
   }
   
   .track-art {
-    margin: 25px;
+    margin: 15px;
     height: 250px;
     width: 250px;
     border: 2px solid #fffafa;
@@ -178,7 +178,7 @@ body {
   .search-container button {
       margin-left: 10px;
       padding: 10px 20px;
-      background-color: #0073ff;
+      background-color: #2a496f;
       border: none;
       color: white;
       text-align: center;
@@ -190,6 +190,6 @@ body {
   }
   
   .search-container button:hover {
-      background-color: #1061cc;
+      background-color: #2a496f;
   }
   
