@@ -22,28 +22,40 @@ let updateTimer;
 
 const music_list = [
     {
-        img : 'images/stay.png',
-        name : 'Stay',
-        artist : 'The Kid LAROI, Justin Bieber',
-        music : 'music/stay.mp3'
+        img : 'images/Alec.png',
+        name : 'Let Me Down Slowly',
+        artist : 'Alec Benjamin',
+        music : 'music/Alec Benjamin-Let Me Down Slowly.mp3'
     },
     {
-        img : 'images/fallingdown.jpg',
-        name : 'Falling Down',
-        artist : 'Wid Cards',
-        music : 'music/fallingdown.mp3'
+        img : 'images/Anne_Marie.png',
+        name : '2002',
+        artist : 'Anne Marie',
+        music : 'music/Anne Marie-2002.mp3'
     },
     {
-        img : 'images/faded.png',
-        name : 'Faded',
-        artist : 'Alan Walker',
-        music : 'music/Faded.mp3'
+        img : 'images/Charlie.png',
+        name : 'Attention',
+        artist : 'Charlie Puth',
+        music : 'music/Charlie Puth-Attention.mp3'
     },
     {
-        img : 'images/ratherbe.jpg',
-        name : 'Rather Be',
-        artist : 'Clean Bandit',
-        music : 'music/Rather Be.mp3'
+        img : 'images/Ava.png',
+        name : 'So AM I',
+        artist : 'Ava Max',
+        music : 'music/Ava Max-So Am I.mp3'
+    },
+    {
+        img : 'images/Zayn.png',
+        name : 'A Whole New World',
+        artist : 'Zayn Malik',
+        music : 'music/Zayn-A Whole New World.mp3'
+    },
+    {
+        img : 'images/Ariana.png',
+        name : '7 rings',
+        artist : 'Ariana Grande',
+        music : 'music/Ariana Grande-7 RINGS.mp3'
     }
 ];
 
@@ -67,25 +79,6 @@ function loadTrack(track_index){
     random_bg_color();
 }
 
-function random_bg_color(){
-    let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
-    let a;
-
-    function populate(a){
-        for(let i=0; i<6; i++){
-            let x = Math.round(Math.random() * 14);
-            let y = hex[x];
-            a += y;
-        }
-        return a;
-    }
-    let Color1 = populate('#');
-    let Color2 = populate('#');
-    var angle = 'to right';
-
-    let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
-    document.body.style.background = gradient;
-}
 function reset(){
     curr_time.textContent = "00:00";
     total_duration.textContent = "00:00";
