@@ -95,8 +95,7 @@ function pauseRandom(){
     randomIcon.classList.remove('randomActive');
 }
 function repeatTrack(){
-    let current_index = track_index;
-    loadTrack(current_index);
+    loadTrack(track_index);
     playTrack();
 }
 function playpauseTrack(){
@@ -118,8 +117,7 @@ function nextTrack(){
     if(track_index < music_list.length - 1 && isRandom === false){
         track_index += 1;
     }else if(track_index < music_list.length - 1 && isRandom === true){
-        let random_index = Number.parseInt(Math.random() * music_list.length);
-        track_index = random_index;
+        track_index = Number.parseInt(Math.random() * music_list.length);
     }else{
         track_index = 0;
     }
@@ -136,8 +134,7 @@ function prevTrack(){
     playTrack();
 }
 function seekTo(){
-    let seekto = curr_track.duration * (seek_slider.value / 100);
-    curr_track.currentTime = seekto;
+    curr_track.currentTime = curr_track.duration * (seek_slider.value / 100);
 }
 function setVolume(){
     curr_track.volume = volume_slider.value / 100;
@@ -160,5 +157,16 @@ function setUpdate(){
 
         curr_time.textContent = currentMinutes + ":" + currentSeconds;
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
+    }
+}
+
+function searchTrack() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    for (let i = 0; i < music_list.length; i++) {
+        if (music_list[i].name.toLowerCase().includes(searchInput)) {
+            loadTrack(i);
+            playTrack();
+            break;
+        }
     }
 }
